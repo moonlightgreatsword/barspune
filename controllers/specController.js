@@ -2,6 +2,7 @@ const express = require('express')
 const { Spec } = require('../models')
 const router = express.Router()
 const db = require('../models')
+const specSeeds = require('../models/specseeds')
 
 // const authRequired = (req, res, next) => {
 //     if(req.session.currentUser){
@@ -19,16 +20,7 @@ router.get('/', async (req, res) => {
 
 // seed route
 router.get('/seed', (req, res) => {
-    db.Spec.create([
-        {
-            name: 'Old-Fashioned',
-            source: 'Classic',
-            ingredients: ['2 oz Eagle Rare 10-Year Bourbon', '1/4 oz simple syrup', '2 dashes Angostura Bitters'],
-            garnish: 'Orange twist',
-            method: 'Stir',
-            tags: ['bourbon', 'whiskey', 'classic', 'bitters']
-        }
-    ], (err, data) => {
+    db.Spec.create(specSeeds, (err, data) => {
         res.redirect('/specs')
     })
 })
