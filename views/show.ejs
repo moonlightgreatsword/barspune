@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+    <h1><%=spec.name%></h1>
+    <p><small><em>Source: <%=spec.source%></em></small></p>
+    <h3>Ingredients</h3>
+    <ul>
+        <% for (let i in spec.ingredients) { %>
+            <li>
+                <%# if (spec.amount) { %>
+                    <%#=spec.ingredients[i].amount%> <%# } %><%#=spec.ingredients[i].name%>
+                <%=spec.ingredients[i]%>
+            </li>
+        <% } %>
+    </ul>
+    <p><strong>Garnish: </strong> <% if (spec.garnish) { %><%=spec.garnish%><% } %></p><br>
+    <p><% if (spec.method) { %><%=spec.method%><% } %></p>
+    <a href="/specs/<%=spec.id%>/edit">
+        <button>EDIT</button>
+    </a>
+    <form action="/specs/<%=spec.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" />
+    </form>
+<%- include('./partials/footer.ejs') %>

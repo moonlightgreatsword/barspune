@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Add a New Spec</h1>
+    <form action="/specs/<%=spec.id%>?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%=spec.name%>" />
+        <label for="source">Source</label>
+        <input type="text" name="source" id="source" value="<%=spec.source%>" />
+        <label for="ingredients">Ingredients</label>
+        <input type="textarea" name="ingredients" id="ingredients" value="<%=spec.ingredients.join(', ')%>" />
+        <label for="garnish">Garnish</label>
+        <input type="text" name="garnish" id="garnish" value="<%=spec.garnish%>" />
+        <label for="method">Method</label>
+        <input type="textarea" name="method" id="method" value="<%=spec.method%>" />
+        <label for="tags">Tags</label>
+        <input type="text" name="tags" id="tags" value="<%=spec.tags.join(', ')%>" />
+        <input type="submit" value="Submit Changes" />
+    </form>
+<%- include('./partials/footer.ejs') %> 

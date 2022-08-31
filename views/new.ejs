@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Add a New Spec</h1>
+    <form action="/specs" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Old-Fashioned" />
+        <label for="source">Source</label>
+        <input type="text" name="source" id="source" placeholder="Classic" />
+        <label for="ingredients">Ingredients</label>
+        <input type="textarea" name="ingredients" id="ingredients" placeholder="2 oz Eagle Rare 10-Year Bourbon, 1/4 oz simple syrup, 2 dashes Angostura Bitters" />
+        <label for="garnish">Garnish</label>
+        <input type="text" name="garnish" id="garnish" placeholder="Orange twist" />
+        <label for="method">Method</label>
+        <input type="textarea" name="method" id="method" placeholder="Add all ingredients to a mixing glass with ice. Stir. Strain into an old-fashioned glass over a large ice cube. Garnish with the orange twist." />
+        <label for="tags">Tags</label>
+        <input type="text" name="tags" id="tags" placeholder="whiskey, bourbon, bitters, classic" />
+        <input type="submit" value="Add Spec" />
+    </form>
+<%- include('./partials/footer.ejs') %> 

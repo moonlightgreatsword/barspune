@@ -1,0 +1,10 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Specs</h1>
+    <ul>
+        <% for (let i in specs) { %>
+            <li>
+                <a href="/specs/<%=specs[i].id%>"><%=specs[i].name%></a>
+            </li>
+        <% } %>
+    </ul>
+<%- include('./partials/footer.ejs')  %> 
