@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
             console.log(`error ${err}`)
             res.send(error)
         } else {
-            res.redirect('/')
+            res.redirect('/specs')
         }
     })
 })

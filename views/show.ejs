@@ -11,8 +11,8 @@
             </li>
         <% } %>
     </ul>
-    <p><strong>Garnish: </strong> <% if (spec.garnish) { %><%=spec.garnish%><% } %></p><br>
-    <p><% if (spec.method) { %><%=spec.method%><% } %></p>
+    <p><strong>Garnish: </strong> <% if ('garnish' in spec) { %><%=spec.garnish%><% } %></p><br>
+    <p><% if ('method' in spec) { %><%=spec.method%><% } %></p>
     <a href="/specs/<%=spec.id%>/edit">
         <button>EDIT</button>
     </a>
