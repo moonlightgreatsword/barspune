@@ -26,7 +26,7 @@ const specController = require('./controllers/specController.js')
 app.use('/specs', specController)
 
 app.get('/', (req, res) => {
-    res.send('welcome to barspune')
+    res.render('home.ejs')
 })
 
 app.get((req, res) => {
