@@ -18,12 +18,12 @@ router.get('/', async (req, res) => {
     res.render('index.ejs', {specs})
 })
 
-// seed route
-router.get('/seed', (req, res) => {
-    db.Spec.create(specSeeds, (err, data) => {
-        res.redirect('/specs')
-    })
-})
+// // seed route
+// router.get('/seed', (req, res) => {
+//     db.Spec.create(specSeeds, (err, data) => {
+//         res.redirect('/specs')
+//     })
+// })
 
 // new
 router.get('/new', (req, res) => {
